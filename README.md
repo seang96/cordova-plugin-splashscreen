@@ -247,11 +247,21 @@ The above looks like the following in `config.xml`:
 3. **`anyany` must be provided for other variations to be used**
    If you don't provide an `anyany` version of the launch image for a specific scale and idiom, the other variations (like `anycom`, `comany`, and `comcom`) will ignored.
 
+## Android-specific information
+
+You can use dots spinner animation:
+
+<preference name="ShowSplashScreenDotsSpinner" value="true" />
+
+But to make it work don't forget to set:
+
+<preference name="ShowSplashScreenSpinner" value="false" />
+
 ## Windows-specific information
 
-Splash screen images can be defined using the [MRT](https://cordova.apache.org/docs/en/dev/config_ref/images.html#windows) concept.  
-If you specify src="res/windows/splashscreen.png" the following files will be copied into the application's images folder:  
-`res/windows/splashscreen.png` | `res/windows/splashscreen.scale-100.png`, `res/windows/splashscreen.scale-125.png`, etc.  
+Splash screen images can be defined using the [MRT](https://cordova.apache.org/docs/en/dev/config_ref/images.html#windows) concept.
+If you specify src="res/windows/splashscreen.png" the following files will be copied into the application's images folder:
+`res/windows/splashscreen.png` | `res/windows/splashscreen.scale-100.png`, `res/windows/splashscreen.scale-125.png`, etc.
 The following are supported:
 
 |   Scale, %   |       Project       |    Width    |    Height    |             Filename              |
@@ -267,8 +277,8 @@ The following are supported:
 |     140      |  Windows Phone 8.1  |     672     |     1120     | `splashscreenphone.scale-140.png` |
 |     240      |  Windows Phone 8.1  |     1152    |     1920     | `splashscreenphone.scale-240.png` |
 
-__Note__: SplashScreens size for Windows 10 project should not exceed 200 KBytes.  
-__Note__: Supported formats are `.png`, `.jpg`, `.jpeg`. Mixing of the extensions within a target is not supported. I.e. you can have `splashscreen.jpg` and `splashscreenphone.png` but not `splashscreen.scale-100.png`, `splashscreen.scale-400.jpg`.  
+__Note__: SplashScreens size for Windows 10 project should not exceed 200 KBytes.
+__Note__: Supported formats are `.png`, `.jpg`, `.jpeg`. Mixing of the extensions within a target is not supported. I.e. you can have `splashscreen.jpg` and `splashscreenphone.png` but not `splashscreen.scale-100.png`, `splashscreen.scale-400.jpg`.
 __Note__: You may need to reopen Visual Studio solution after changing the images and doing a `cordova prepare` for the changes to take effect.
 
 ## Example Configuration
